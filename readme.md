@@ -1,5 +1,0 @@
-# NVIM config
-
-## Dependencies
-NvChad
-
