@@ -34,3 +34,8 @@ lspconfig.ansiblels.setup {
   capabilities = capabilities,
   filetypes = {"yaml"},
 }
+
+lspconfig.dockerls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
