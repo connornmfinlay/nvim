@@ -18,6 +18,11 @@ local plugins = {
     "williamboman/mason.nvim",
     opts = overrides.mason
   },
+  
+  {
+    "williamboman/mason-lspconfig.nvim",
+    opts = overrides.mason
+  },
 
   {
     "nvim-treesitter/nvim-treesitter",
