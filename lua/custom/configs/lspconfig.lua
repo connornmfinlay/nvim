@@ -41,8 +41,14 @@ lspconfig.ansiblels.setup {
   filetypes = {"yaml"},
 }
 
+-- docker server
 lspconfig.dockerls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }
-
+-- dash server
+lspconfig.dockerls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes - {"shell"},
+}
