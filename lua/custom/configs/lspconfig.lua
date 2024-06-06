@@ -4,7 +4,7 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = {"bashls", "pyright", "rust_analyzer", "ansiblels", "dockerls", "bashls", "gopls", "zls"},
+  ensure_installed = {"bashls", "pyright", "rust_analyzer", "ansiblels", "dockerls", "bashls", "gopls", "zls", "lemminx"},
 })
 -- if you just want default config for the servers then put them in a table
 local servers = { "html", "cssls", "tsserver", "clangd","bashls","dockerls","gopls", "zls" }
@@ -35,5 +35,12 @@ lspconfig.ansiblels.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   filetypes = {"yaml"},
+}
+
+--xml
+lspconfig.lemminx.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {"xml"},
 }
 
