@@ -45,7 +45,7 @@ lspconfig.lemminx.setup {
 }
 
 --toml
-lspconfig.harperls.setup {
+lspconfig.harper_ls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   filetypes = {"toml"},
