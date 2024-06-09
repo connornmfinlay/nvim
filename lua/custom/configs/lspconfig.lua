@@ -7,7 +7,7 @@ require("mason-lspconfig").setup({
   ensure_installed = {"bashls", "pyright", "rust_analyzer", "ansiblels", "dockerls", "bashls", "gopls", "zls", "lemminx", "harper-ls"},
 })
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssls", "tsserver", "clangd","bashls","dockerls","gopls", "zls", "lemminx", "harper-ls" }
+local servers = { "html", "cssls", "tsserver", "clangd","bashls","dockerls","gopls", "zls", "lemminx"}
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -44,3 +44,9 @@ lspconfig.lemminx.setup {
   filetypes = {"xml"},
 }
 
+--toml
+lspconfig.harperls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {"toml"},
+}
