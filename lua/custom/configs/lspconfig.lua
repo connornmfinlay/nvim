@@ -4,10 +4,10 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = {"bashls", "pyright", "rust_analyzer", "ansiblels", "dockerls", "bashls", "gopls", "zls", "lemminx"},
+  ensure_installed = {"bashls", "pyright", "rust_analyzer", "ansiblels", "dockerls", "bashls", "gopls", "zls", "lemminx", "harper-ls"},
 })
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssls", "tsserver", "clangd","bashls","dockerls","gopls", "zls" }
+local servers = { "html", "cssls", "tsserver", "clangd","bashls","dockerls","gopls", "zls", "lemminx", "harper-ls" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
