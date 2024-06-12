@@ -4,7 +4,7 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = {"bashls", "pyright", "rust_analyzer", "ansiblels", "dockerls", "bashls", "gopls", "zls", "lemminx"},
+  ensure_installed = {"bashls", "pyright", "rust_analyzer", "ansiblels", "dockerls", "bashls", "gopls", "zls", "lemminx", "powershell_es"},
 })
 -- if you just want default config for the servers then put them in a table
 local servers = { "html", "cssls", "tsserver", "clangd","bashls","dockerls","gopls", "zls", "lemminx"}
@@ -49,4 +49,11 @@ lspconfig.harper_ls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   filetypes = {"toml"},
+}
+
+--ps1
+lspconfig.powershell_es.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {"ps1"},
 }
