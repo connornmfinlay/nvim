@@ -57,4 +57,5 @@ lspconfig.powershell_es.setup {
   capabilities = capabilities,
   shell = "powershell.exe",
   filetypes = {"ps1"},
+  cmd = {'pwsh', '-NoLogo', '-NoProfile', '-Command', "c:/PSES/Start-EditorServices.ps1"},
 }
