@@ -55,5 +55,6 @@ lspconfig.harper_ls.setup {
 lspconfig.powershell_es.setup {
   on_attach = on_attach,
   capabilities = capabilities,
+  shell = "powershell.exe",
   filetypes = {"ps1"},
 }
