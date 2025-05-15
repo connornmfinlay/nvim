@@ -34,14 +34,17 @@ local plugins = {
     opts = overrides.nvimtree,
   },
 
-  -- Install a plugin
   {
-    "max397574/better-escape.nvim",
-    event = "InsertEnter",
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000,
     config = function()
-      require("better_escape").setup()
+      require("catppuccin").setup({
+        flavour = "frappe", -- Options: latte, frappe, macchiato, mocha
+      })
     end,
   },
+
 
   {
     "stevearc/conform.nvim",

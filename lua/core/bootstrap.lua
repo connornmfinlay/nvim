@@ -52,7 +52,7 @@ M.gen_chadrc_template = function()
 
       local file = io.open(path .. "/chadrc.lua", "w")
       if file then
-        file:write "---@type ChadrcConfig\nlocal M = {}\n\nM.ui = { theme = 'onedark' }\n\nreturn M"
+        file:write "---@type ChadrcConfig\nlocal M = {}\n\nM.ui = { theme = 'catppuccin' }\n\nreturn M"
         file:close()
       end
     end
