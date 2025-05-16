@@ -7,7 +7,7 @@ require("mason-lspconfig").setup({
   ensure_installed = {"bashls", "pyright", "rust_analyzer", "ansiblels", "dockerls", "bashls", "gopls", "zls", "lemminx", "powershell_es"},
 })
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssls", "tsserver", "clangd","bashls","dockerls","gopls", "zls", "lemminx"}
+local servers = { "html", "cssls", "ts_ls", "clangd","bashls","dockerls","gopls", "zls", "lemminx"}
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
